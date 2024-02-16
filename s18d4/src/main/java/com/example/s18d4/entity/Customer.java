@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @NoArgsConstructor
 @Data
 @Entity
@@ -20,6 +22,11 @@ public class Customer {
     private String email;
     @Column(name = "salary")
     private double salary;
-    @Column(name = "address_id")
-    private int addressId;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "address_id", referencedColumnName = "id")
+    private Address adress;
+
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    private List<Account> accounts;
 }
