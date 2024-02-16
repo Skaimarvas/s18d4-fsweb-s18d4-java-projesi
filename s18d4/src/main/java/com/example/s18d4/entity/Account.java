@@ -1,4 +1,21 @@
 package com.example.s18d4.entity;
 
+import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@Data
+@Entity
+@Table(name = "account", schema = "fsweb")
 public class Account {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    @Column(name = "account_name")
+    private String accountName;
+    @Column(name = "money_amount")
+    private double moneyAmount;
+    @Column(name = "customer_id")
+    private int customerId;
 }
