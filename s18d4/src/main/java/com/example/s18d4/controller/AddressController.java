@@ -17,7 +17,7 @@ public class AddressController {
     }
 
     @GetMapping("/{id}")
-    public Address findAdress(@PathVariable int id){
+    public Address findAddress(@PathVariable int id){
         return null;
     }
 
