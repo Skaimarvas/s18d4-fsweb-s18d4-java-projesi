@@ -16,6 +16,7 @@ public class Account {
     private String accountName;
     @Column(name = "money_amount")
     private double moneyAmount;
-    @Column(name = "customer_id")
-    private int customerId;
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
 }
