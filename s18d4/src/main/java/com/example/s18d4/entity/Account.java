@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
     @Column(name = "account_name")
     private String accountName;
     @Column(name = "money_amount")
