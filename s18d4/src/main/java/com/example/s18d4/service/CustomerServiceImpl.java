@@ -2,10 +2,12 @@ package com.example.s18d4.service;
 
 import com.example.s18d4.entity.Customer;
 import com.example.s18d4.repository.CustomerRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class CustomerServiceImpl implements  CustomerService{
     private final CustomerRepository customerRepository;
 
