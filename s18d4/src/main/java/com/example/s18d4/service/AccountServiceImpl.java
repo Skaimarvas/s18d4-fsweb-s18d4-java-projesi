@@ -3,10 +3,13 @@ package com.example.s18d4.service;
 import com.example.s18d4.entity.Account;
 import com.example.s18d4.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+
+@Service
 public class AccountServiceImpl implements AccountService{
 
     private final AccountRepository accountRepository;
